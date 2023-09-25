@@ -1,0 +1,31 @@
+// Online C++ compiler to run C++ program online
+#include <iostream>
+
+int main() {
+    int a; //число элементов массива
+    std::cin >> a;
+    int ar[a];
+
+//будем искать максимум
+    int max = 0;
+    int s = 1;
+
+    for (int i = 0; i < a; i++)
+      {
+        std::cin >> ar[i] ;
+        if(ar[i] >= max)//в один проход ищем и максимальное и увеличиваем счетчик, если равен максимальному
+        {
+          if(ar[i] == max)
+          {
+            s++;
+          }
+       	  else
+          {
+            max = ar[i];
+            s=1;
+          }
+        }
+        
+      }
+      std::cout <<s;
+  }
