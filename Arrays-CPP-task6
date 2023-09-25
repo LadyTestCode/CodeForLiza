@@ -1,0 +1,27 @@
+// Online C++ compiler to run C++ program online
+#include <iostream>
+
+//ЗАДАЧА НЕ РЕШЕНА ЭТО ПРОСТО НАРАБОТКИ!!!!!!!
+
+int main() {
+    int a0{0}; //для цикла
+    int a;
+    int ar[26];//счетчики цифр
+    for (int i=0;i<=25; i++)//заполнили массив результатов нулями
+    {
+      ar[i]=0;
+    }
+    std::cin >> a;//сколько символов в массиве с буквами
+    char arstr[1000]{};
+    std::cin.getline(arstr, a);
+  
+    for (int j=0;j<a;j++) 
+      std::cout << arstr[j];
+      //  if (arstr[j] =="A" or arstr[j]=="a")
+        {
+          std::cout <<"a found";
+        }
+      
+   
+    return 0;
+}
