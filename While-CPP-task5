@@ -1,0 +1,55 @@
+// Online C++ compiler to run C++ program online
+#include <iostream>
+
+int main() {
+    int a0{0}; //для цикла
+    int a;
+    int a1{0},a2{0},a3{0},a4{0},a5{0},a6{0},a7{0},a8{0},a9{0};//счетчики цифр
+    while (a0 <= 0)
+      {
+        std::cin >> a;
+        if (a==0)
+        {
+          a0++;
+        }
+        if (a==1)
+        {
+          a1++;
+        }
+        if (a==2)
+        {
+          a2++;
+        }
+        if (a==3)
+        {
+          a3++;
+        }
+        if (a==4)
+        {
+          a4++;
+        }
+        if (a==5)
+        {
+          a5++;
+        }
+        if (a==6)
+        {
+          a6++;
+        }
+        if (a==7)
+        {
+          a7++;
+        }
+        if (a==8)
+        {
+          a8++;
+        }
+        if (a==9)
+        {
+          a9++;
+        }
+      }
+   
+    std::cout << a1<<" "<<a2<<" "<<a3<<" "<<a4<<" "<<a5<<" "<<a6<<" "<<a7<<" "<<a8<<" "<<a9<<" "; 
+    return 0;
+}
