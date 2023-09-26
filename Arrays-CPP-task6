@@ -1,8 +1,6 @@
 // Online C++ compiler to run C++ program online
 #include <iostream>
 
-//ЗАДАЧА НЕ РЕШЕНА ЭТО ПРОСТО НАРАБОТКИ!!!!!!!
-
 int main() {
     int a0{0}; //для цикла
     int a;
@@ -13,15 +11,121 @@ int main() {
     }
     std::cin >> a;//сколько символов в массиве с буквами
     char arstr[1000]{};
-    std::cin.getline(arstr, a);
-  
+    for (int k=0; k<a; k++)
+    {
+      std::cin >> arstr[k] ;
+    }
     for (int j=0;j<a;j++) 
-      std::cout << arstr[j];
-      //  if (arstr[j] =="A" or arstr[j]=="a")
-        {
-          std::cout <<"a found";
+        {       
+        if (arstr[j] =='A' or arstr[j]=='a')
+          {
+            ar[0]=ar[0]+1;
+          }
+        if (arstr[j] =='B' or arstr[j]=='b')
+          {
+            ar[1]=ar[1]+1;
+          }
+        if (arstr[j] =='C' or arstr[j]=='c')
+          {
+            ar[2]=ar[2]+1;
+          }
+        if (arstr[j] =='D' or arstr[j]=='d')
+          {
+            ar[3]=ar[3]+1;
+          }
+        if (arstr[j] =='E' or arstr[j]=='e')
+          {
+            ar[4]=ar[4]+1;
+          }
+        if (arstr[j] =='F' or arstr[j]=='f')
+          {
+            ar[5]=ar[5]+1;
+          }
+        if (arstr[j] =='G' or arstr[j]=='g')
+          {
+            ar[6]=ar[6]+1;
+          }
+        if (arstr[j] =='H' or arstr[j]=='h')
+          {
+            ar[7]=ar[7]+1;
+          }
+        if (arstr[j] =='I' or arstr[j]=='i')
+          {
+            ar[8]=ar[8]+1;
+          }
+        if (arstr[j] =='J' or arstr[j]=='j')
+          {
+            ar[9]=ar[9]+1;
+          }
+        if (arstr[j] =='K' or arstr[j]=='k')
+          {
+            ar[10]=ar[10]+1;
+          }
+        if (arstr[j] =='L' or arstr[j]=='l')
+          {
+            ar[11]=ar[11]+1;
+          }
+        if (arstr[j] =='M' or arstr[j]=='m')
+          {
+            ar[12]=ar[12]+1;
+          }
+        if (arstr[j] =='N' or arstr[j]=='n')
+          {
+            ar[13]=ar[13]+1;
+          }
+        if (arstr[j] =='O' or arstr[j]=='o')
+          {
+            ar[14]=ar[14]+1;
+          }
+        if (arstr[j] =='P' or arstr[j]=='p')
+          {
+            ar[15]=ar[15]+1;
+          }
+        if (arstr[j] =='Q' or arstr[j]=='q')
+          {
+            ar[16]=ar[16]+1;
+          }
+        if (arstr[j] =='R' or arstr[j]=='r')
+          {
+            ar[17]=ar[17]+1;
+          }
+        if (arstr[j] =='S' or arstr[j]=='s')
+          {
+            ar[18]=ar[18]+1;
+          }
+        if (arstr[j] =='T' or arstr[j]=='t')
+          {
+            ar[19]=ar[19]+1;
+          }
+        if (arstr[j] =='U' or arstr[j]=='u')
+          {
+            ar[20]=ar[20]+1;
+          }
+        if (arstr[j] =='V' or arstr[j]=='v')
+          {
+            ar[21] =ar[21]+1;
+          }
+        if (arstr[j] =='W' or arstr[j]=='w')
+          {
+            ar[22]=ar[22]+1;
+          }
+        if (arstr[j] =='X' or arstr[j]=='x')
+          {
+            ar[23]=ar[23]+1;
+          }
+        if (arstr[j] =='Y' or arstr[j]=='y')
+          {
+            ar[24]=ar[24]+1;
+          }
+        if (arstr[j] =='Z' or arstr[j]=='z')
+          {
+            ar[25]=ar[25]+1;
+          }
         }
-      
-   
+
+    for (int m=0; m<26; m++)
+    {
+      std::cout<< ar[m] << " ";
+    }
     return 0;
 }
