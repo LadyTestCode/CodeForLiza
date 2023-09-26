@@ -14,16 +14,16 @@ int main() {
 
     bool flag{false};
     
-    for (int i = 0; i < a; i++)
+    for (int i = 0; i < a; i++) //берем элемент массива и далее снова пробегаемся по массиву
     {
       flag=false;
       for (int k = 0; k < a; k++)
       {
         if ((ar[k]==ar[i]) and (i != k))
-          flag = true;
+        flag = true; //если нашли, то поднимаем флажок - нам такой элемент не подходит
                 
       }
-      if (flag == false)
+      if (flag == false) //если флаг остался опущенным и второго такого числа нет, то мы его печатаем
       {
         std::cout <<ar[i]<<" ";
       }
