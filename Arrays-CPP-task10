@@ -1,0 +1,36 @@
+// Online C++ compiler to run C++ program online
+#include <iostream>
+
+int main() {
+    int a; //число элементов массива
+    std::cin >> a;
+    int ar[a];
+   
+//заполнили массив
+    for (int j=0; j<a; j++)
+    {
+      std::cin >> ar[j] ;
+    }
+
+    bool flag{false};
+    
+    for (int i = 0; i < a; i++) //берем элемент массива и далее снова пробегаемся по массиву, ищем такой же
+    {
+      flag=false;
+      for (int k = 0; k < a; k++)
+      {
+        if ((ar[k]==ar[i]) and (i != k) and ar[k] !=30001)
+        {
+          flag = true; //если нашли, то поднимаем флажок - нам такой элемент подходит
+          ar[k]= 30001;//заменяем элемент, чтобы больше его не считать
+        }
+                
+      }
+      if ((flag == true) and (ar[i]!=30001))//если флаг остался опущенным и второго такого числа нет, то мы его печатаем
+      {
+        std::cout <<ar[i]<<" ";
+      }
+    }
+   
+      return 0;
+}
