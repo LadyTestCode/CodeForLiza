@@ -13,9 +13,13 @@ int main()
     std::cout << "last: " << last << std::endl;
  
     numbers[0] = 6;  // изменяем значение первого элемента
+    numbers.push_back(8);//добавили элемент в конец
+  
+    auto iter = numbers.cbegin();   // константный итератор указывает на первый элемент вектора
+    numbers.emplace(iter + 2, 8);//добавили на 2 позицию вектора (0+2) цифру 8
   
     for(int n : numbers) //вот так в цикле можно печатать вектора
-        std::cout << n << "\t";  //В ответе будет: 6  2  3  4  5
+        std::cout << n << "\t";  // 6  2  3  4  5
      
     std::cout << std::endl;
     return 0;
