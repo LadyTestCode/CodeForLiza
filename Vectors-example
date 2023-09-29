@@ -1,0 +1,22 @@
+#include <iostream>
+#include <vector>
+
+int main()
+{
+    std::vector<int> numbers {1, 2, 3, 4, 5}; //задали вектор
+     
+    int first = numbers.front();    // Первый элемент вектора
+    int last = numbers.back();      // Последний элемент вектора
+    int second = numbers[1];        // Обращаемся по индексу к элементам
+    std::cout << "first: " << first << std::endl;
+    std::cout << "second: " << second << std::endl;
+    std::cout << "last: " << last << std::endl;
+ 
+    numbers[0] = 6;  // изменяем значение первого элемента
+  
+    for(int n : numbers) //вот так в цикле можно печатать вектора
+        std::cout << n << "\t";  //В ответе будет: 6  2  3  4  5
+     
+    std::cout << std::endl;
+    return 0;
+}
