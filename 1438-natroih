@@ -1,14 +1,24 @@
 #include <iostream>
-#include <math.h>
+#include <string>
 
 //главная функция
-int main ()
-{
-  long a;
-  std::cin >> a;
-  if (a%3==0)
-    std::cout << "YES";
-  else 
-    std::cout << "NO";
+int main() {
+   std::string c;
+   int b=0;
+// будем рабтать со строкой, так как число очень больше
+   std::string s = "";
+   std::cin >> s;
+   int k;
+//идем по строке и считаем сумму цифр   
+for (int i=0;i<s.length();i++)
+    {
+      c=s[i];//берем символ
+      k=std::stoi(c); //stoi переводит строку в число
+      b = b + k; //суммируем цифры числа
+    }
+if (b%3==0) //далее по правилу - число дулится на 3 если сумма его цифр делится на 3
+  std::cout << "YES";
+else 
+  std::cout << "NO";
   return 0;
 }
