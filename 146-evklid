@@ -1,0 +1,35 @@
+#include <iostream>
+//алгоритм Евклида. Вычитание
+//задача проходит только 11 тестов на сайте!!! то есть где то надо додумать
+int NOD(int x, int y)
+{
+  while (x!=y)
+  if (x>y)
+    x-=y;
+  else y-=x;
+return x;
+}
+
+//главная функция
+int main ()
+{
+  int a,b,c,d,m,n;
+  std::cin >> a;
+  std::cin >> b;
+  std::cin >> c;
+  std::cin >> d;
+  if (b==0 or d==0)
+  {
+    std::cout << "Error";
+    return 0;
+  }
+//находим числитель и знаменатель дроби суммы
+  m=a*b+c*d;
+  n=b*d;
+//вызываем функцию поиска НОД
+  int q = NOD(m, n);
+  m=m/q;
+  n=n/q;
+  std::cout << m << " " << n << std::endl;
+return 0;
+  }
