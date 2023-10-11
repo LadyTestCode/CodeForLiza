@@ -1,2 +1,2 @@
 # CodeForLiza
-These files contains small programs to study  Arrays in C++
+These files contains small programs to study  C++
