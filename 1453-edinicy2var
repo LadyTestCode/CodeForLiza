@@ -1,0 +1,17 @@
+#include <iostream>
+#include <string>
+
+//главная функция
+int main() {
+   std::string c;
+   int b=0;
+   long k=0;
+   bool flag=false;
+   std::cin >> b;
+  if (b%2==0) std::cout << "NO";
+  else
+    {
+        
+    }
+  return 0;
+}
