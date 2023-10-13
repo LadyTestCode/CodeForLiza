@@ -1,0 +1,26 @@
+#include <iostream>
+//алгоритм Евклида. Вычитание!!!!! Задачу еще не проверяла на сайте
+int NOD(int x, int y)
+{
+  while (x!=y)
+  if (x>y)
+    x-=y;
+  else y-=x;
+return x;
+}
+
+//главная функция
+int main ()
+{
+  int a,b,k;
+  std::cin >> a;
+  std::cin >> k;
+  b=k;
+  for (int i=1;i<=a;i++)
+    {
+      k=NOD(b,k);
+      if (i!=a) std::cin >> b;
+    }
+  std::cout<<k<<std::endl;
+  return 0;
+}
