@@ -1,0 +1,34 @@
+#include <iostream>
+#include <math.h>
+
+//главная функция
+int issimple (int a)
+{
+  bool flag = false;
+  for (int i=2; i <= sqrt(a); i++)
+    {
+      if (a%i==0)
+      {
+        flag = true;
+      }
+    }
+  if (flag == true)
+    return 1;
+  else 
+  return 0;
+}
+
+int main ()
+{
+  int b;
+  std::cin >> b; 
+  for (int i=b/2; i<=b; i++)
+    {
+      if (issimple(i)==0 && issimple(b-i)==0)
+      {
+        std::cout<<i <<" "<< b-i; 
+        break;
+      }
+    }
+  return 0;
+}
