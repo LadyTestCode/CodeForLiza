@@ -1,7 +1,7 @@
 #include <iostream>
 #include <math.h>
 
-//главная функция
+
 int issimple (int a)
 {
   bool flag = false;
@@ -17,7 +17,7 @@ int issimple (int a)
   else 
   return 1;
 }
-
+//главная функция
 int main ()
 {
   int b;
