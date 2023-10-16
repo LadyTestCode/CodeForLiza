@@ -1,17 +1,19 @@
-#include <iostream>
-#include <string>
 
-//главная функция
+#include <iostream>
+//вариант от лицеистов
+using namespace std;
+
 int main() {
-   std::string c;
-   int b=0;
-   long k=0;
-   bool flag=false;
-   std::cin >> b;
-  if (b%2==0) std::cout << "NO";
-  else
-    {
-        
+    int N, r = 0;
+    cin >> N;
+    for (int n = 0; n <= N; ++n) {
+        r = (r * 10 + 1) % N;
+        if (r == 0) {
+            for (int i = 0; i <= n; ++i) cout << 1;
+            cout << endl;
+            return 0;
+        }
     }
+    cout << "NO\n";
   return 0;
 }
