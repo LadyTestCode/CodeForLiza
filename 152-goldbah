@@ -13,9 +13,9 @@ int issimple (int a)
       }
     }
   if (flag == true)
-    return 1;
+    return 0;
   else 
-  return 0;
+  return 1;
 }
 
 int main ()
@@ -24,7 +24,7 @@ int main ()
   std::cin >> b; 
   for (int i=b/2; i<=b; i++)
     {
-      if (issimple(i)==0 && issimple(b-i)==0)
+      if (issimple(i)==1 && issimple(b-i)==1)
       {
         std::cout<<i <<" "<< b-i; 
         break;
