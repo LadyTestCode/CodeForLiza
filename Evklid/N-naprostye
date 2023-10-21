@@ -1,0 +1,55 @@
+#include <iostream>
+#include <math.h>
+
+
+int issimple (int a)
+{
+  bool flag = false;
+  for (int i=2; i <= sqrt(a); i++)
+    {
+      if (a%i==0)
+      {
+        flag = true;
+      }
+    }
+  if (flag == true)
+    return 0;
+  else 
+  return 1;
+}
+//главная функция
+int main ()
+
+{
+  int a;
+  std::cin >> a;
+  int i = 2;
+  int k=0;
+  while (a!=1)
+  {
+    while (i<=a)
+    {
+      if (issimple(i) == 1)
+      {
+        if (a%i==0)
+          {
+            k+=1;
+            a=a/i;
+          }
+        else 
+          {
+            if (k!=0) std::cout<<i<<"⌃"<<k<<"*";
+            k=0;
+            i+=1;
+          }
+      }
+      else 
+      {
+        i+=1;
+        
+      }
+    }
+    std::cout<<i<<"⌃"<<k<<std::endl;
+  }
+  return 0;
+}
