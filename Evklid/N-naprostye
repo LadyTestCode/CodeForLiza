@@ -38,7 +38,10 @@ int main ()
           }
         else 
           {
-            if (k!=0) std::cout<<i<<"⌃"<<k<<"*";
+            if (k!=0) 
+              if (k==1) std::cout<<i<<"*";
+              else 
+                std::cout<<i<<"⌃"<<k<<"*";
             k=0;
             i+=1;
           }
@@ -49,7 +52,9 @@ int main ()
         
       }
     }
-    std::cout<<i<<"⌃"<<k<<std::endl;
+    if (k==1) std::cout<<i;
+    else 
+      std::cout<<i<<"⌃"<<k<<std::endl;
   }
   return 0;
 }
