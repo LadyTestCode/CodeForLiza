@@ -20,7 +20,7 @@ int main() {
     {
         ardif[i]=ar[i]-c;
     }
-    int min=ardif[i];
+    int min=ardif[0];
     int j=0;
     for(int i = 0; i < a; i++)
     {
