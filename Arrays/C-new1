@@ -18,15 +18,16 @@ int main() {
 
     for(int i = 0; i < a; i++)
     {
-        ardif[i]=ar[i]-c;
+        ardif[i]=abs(ar[i]-c);
     }
-    int min=ardif[0];
+    int min=10000;
     int j=0;
     for(int i = 0; i < a; i++)
     {
         if (ardif[i]<min)
-        {min = ardif[i];
-         j=i;
+        {
+           min = ardif[i];
+           j=i;
         }
       
     }
