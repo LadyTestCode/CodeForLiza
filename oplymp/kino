@@ -11,7 +11,11 @@ int main() {
     std::cin >> q;
     std::cin >> m;
     std::cin >> t;
-    time = n*q+(m-n*q/t)*t;
+    time = q+n*q;
+    if ((m-n*q/t)>0)
+      time+=(m-n*q/t)*t;
+    time+=t;
     std::cout << time;
     return 0;
 }
+
