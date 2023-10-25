@@ -1,0 +1,17 @@
+// Online C++ compiler to run C++ program online
+#include <iostream>
+#include <stdlib.h> // нужен для вызова функций rand(), srand()
+#include <time.h> // нужен для вызова функции time()
+
+
+int main() {
+    long n,q,m,t; //число элементов массив
+    long time;
+    std::cin >> n;
+    std::cin >> q;
+    std::cin >> m;
+    std::cin >> t;
+    time = n*q+(m-n*q/t)*t;
+    std::cout << time;
+    return 0;
+}
