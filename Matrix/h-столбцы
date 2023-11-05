@@ -1,0 +1,36 @@
+// Online C++ compiler to run C++ program online
+#include <iostream>
+
+int main() {
+    int a; //число элементов массива
+    int x;
+    std::cin >> x;
+    std::cin >> a;
+    int ar[100][100];
+    //заполнили массив
+    for (int i = 0; i < a; i++)
+    {
+        for (int j = 0; j < a; j++)
+        {
+            std::cin >> ar[i][j];
+        }
+    }
+    bool flag;
+    for (int i = 0; i < a; i++)
+    {
+        flag = false;
+        for (int j = 0; j < a; j++)
+        {
+            if (ar[j][i] == x)
+            {
+                flag = true;
+            }
+        }
+        if (flag == true)
+            std::cout << "YES" <<std::endl;
+        else
+            std::cout << "NO"<<std::endl;
+
+    }
+    return 0;
+}
