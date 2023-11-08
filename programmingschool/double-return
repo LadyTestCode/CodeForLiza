@@ -1,0 +1,45 @@
+// Online C++ compiler to run C++ program online
+#include <iostream>
+
+int main() {
+    int n,a,b,c,d;
+    std::cin >> n;
+    int ar[1000];
+    int ar1[1000];
+    //заполнили массив
+    for (int i = 0; i < n; i++)
+    {
+       ar[i]=i+1;
+    }
+    
+    std::cin >> a>>b>>c>>d;
+    for (int i = 0; i < a-1; i++)
+    {
+      ar1[i] = ar[i];
+    }
+    
+    for (int i = a-1; i < b; i++)
+    {
+        ar1[i] = 11;//дописать вместо 11 переворот этих чисел
+    }
+    
+    for (int i = b; i < c-1; i++)
+    {
+        ar1[i] = ar[i];
+    }
+   
+    for (int i = c-1; i < d; i++)
+    {
+        ar1[i] = 11;////дописать вместо 11 переворот этих чисел
+    }
+    
+    for (int i = d; i < n; i++)
+    {
+        ar1[i] = ar[i];
+    }
+    for (int i = 0; i < n; i++)
+    {
+       std::cout << ar1[i] << " ";
+    }
+    return 0;
+}
