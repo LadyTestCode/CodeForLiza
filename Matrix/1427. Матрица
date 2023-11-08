@@ -1,0 +1,53 @@
+// Online C++ compiler to run C++ program online
+#include <iostream>
+
+int main() {
+    int n; //число строк
+    int m; //число столбцов
+    std::cin >> n;
+    std::cin >> m;
+    int count = 0;
+    int ar[750][750];
+    int armin[750];
+    int armax[750];
+    //заполнили массив
+    for (int i = 0; i < n; i++)
+    {
+        for (int j = 0; j < m; j++)
+        {
+            std::cin >> ar[i][j];
+        }
+    }
+      //заполним массивы минимума по строкам и максимума по столбцам
+    
+    for (int i = 0; i < n; i++)
+    {
+        int min = 1001;
+        for (int j = 0; j < m; j++)
+        {
+             if (ar[i][j]<=min) min = ar[i][j];
+        }
+        armin[i] = min;
+    }
+
+    for (int i = 0; i < m; i++)
+    {
+        int max = -1001;
+        for (int j = 0; j < n; j++)
+        {
+          if (ar[j][i]>=max) max = ar[j][i];
+        }
+        armax[i] = max;
+    }
+  
+    for (int i = 0; i < n; i++)//идем по строкам
+    {
+      for (int j = 0; j < m; j++)//идем по столбцам выбраной строки
+          {
+                //для каждого элемента по его координатам проверяем, совпадает он с максимумом и минимумом или нет
+              if ((ar[i][j] == armax[j]) && (ar[i][j] == armin[i])) count++;
+          }
+    }
+    std::cout << count;
+    return 0;
+}
