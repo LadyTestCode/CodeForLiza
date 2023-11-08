@@ -1,0 +1,35 @@
+// Online C++ compiler to run C++ program online
+#include <iostream>
+
+int main() {
+    int n;
+    std::cin >> n;
+    long ar[1000];
+    //заполнили массив
+    for (int i = 0; i < n; i++)
+    {
+            std::cin >> ar[i];
+    }
+    int m;
+    // считали число подмассивов
+    std::cin >> m;
+    long a,b;
+    int ar1[1000][2];
+    //Заполнили двумерный массив парами значений
+    for (int i = 1; i <= m; i++)
+    {
+            std::cin >> a>> b;
+            ar1[i][0]=a;
+            ar1[i][1]=b;
+    }
+    //идем по этому массиву, получаем пару чисел и для нее из основного массива делаем выборку
+    for (int i = 1; i <= m; i++)
+      {
+      a=ar1[i][0];
+      b=ar1[i][1];
+      for (int j=a-1;j<b;j++)  //выборка из основного массива от первого до второго числа
+        std::cout << ar[j] << " ";
+      std::cout << std::endl;
+      }
+    return 0;
+}
