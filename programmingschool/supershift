@@ -1,0 +1,33 @@
+// Online C++ compiler to run C++ program online
+#include <iostream>
+
+int main() {
+    int n;
+    std::cin >> n;
+    long ar[1000];
+    //заполнили массив
+    for (int i = 0; i < n; i++)
+    {
+            std::cin >> ar[i];
+    }
+    int m;
+    std::cin >> m;
+    if (m>0)
+    {
+      //начинаем печатать элементы массива начиная с m-го элемента с конца
+        for (int i = n-m; i < n; i++)
+          std::cout << ar[i] << " ";
+      //допечатываем начальные элементы
+        for (int j = 0; j < n-m; j++)
+          std::cout << ar[j] << " ";
+    }
+    else {
+      //начинаем печатать элементы массива начиная с m-го элемента с начала
+      for (int j = 0+abs(m); j < n; j++)
+        std::cout << ar[j] << " ";
+      //допечатываем начальные элементы
+      for (int i = 0; i <=n-abs(m); i++)
+        std::cout << ar[i] << " ";
+    }
+    return 0;
+}
