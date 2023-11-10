@@ -4,7 +4,7 @@
   int main() {
     int a; //число элементов массива
     std::cin >> a;
-    int ar[a];
+    int ar[100];
 
   //заполнили массив
     for (int j=0; j<a; j++)
@@ -38,9 +38,18 @@
         }
     }
     int proizv=1;
-    for (int j=s+1; j<t; j++)
+    if (s<t) {
+      for (int j=s+1; j<t; j++)
+      {
+        proizv = proizv*ar[j];
+      }
+    }
+    else 
     {
-      proizv = proizv*ar[j];
+      for (int j=t+1; j<s; j++)
+      {
+        proizv = proizv*ar[j];
+      }
     }
     std::cout << proizv;
     return 0;
