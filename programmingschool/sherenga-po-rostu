@@ -1,0 +1,28 @@
+// Online C++ compiler to run C++ program online
+#include <iostream>
+
+  int main() {
+    int a,x; //число элементов массива
+    std::cin >> a;
+    int ar[a];
+
+  //заполнили массив
+    for (int j=0; j<a; j++)
+    {
+      std::cin >> ar[j] ;
+    }
+    std::cin >> x;
+    bool flag=false;
+    //находим индекс элемента предшествующего росту мальчика
+    for (int j=0; j<a; j++)
+      {
+        if (ar[j]<x) //нашли в строю мальчика меньше новенького
+        {
+          std::cout<<j+1;
+          flag = true;
+          break; //как только нашли, сразу выходим из цикла
+        }
+      }
+    if (flag == false) std::cout<<a+1; //если не нашли в строю меньшего мальчика, то добавляем нового мальчика в конец строя
+    return 0;
+}
