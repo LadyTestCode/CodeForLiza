@@ -1,4 +1,5 @@
 // Online C++ compiler to run C++ program online
+// Проходит только 6 тестов, остальные не проходят по времени, но сам алгоритм правильный
 #include <iostream>
 
   int main() {
