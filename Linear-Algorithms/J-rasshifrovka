@@ -1,0 +1,35 @@
+// Online C++ compiler to run C++ program online
+// проходят 5 тестов, остальные даже не запускаются
+#include <iostream>
+
+  int main() {
+    int n; 
+    int ar[300000];
+
+    std::cin >>n;
+    
+  //заполнили массив
+    for (int j=0; j<n; j++)
+    {
+      std::cin >> ar[j] ;
+    }
+   
+    int count = 1;
+    int max = ar[0];
+    int min = ar[0];
+    for (int i = 0; i < n; i++)
+      {
+        if (ar[i] >= max) 
+        {
+          max = ar[i];      
+        }
+        else if (ar[i] <= min)
+        {
+          min = ar[i];
+          max = ar[i];
+          count +=1;
+        }
+      }
+    std::cout << count;
+    return 0;
+}
