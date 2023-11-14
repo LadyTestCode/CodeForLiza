@@ -1,0 +1,36 @@
+#include <iostream>
+#include <vector>
+using namespace std;
+
+int main() {
+    int n;
+    cin >> n;
+    int a[n];
+    for (int i = 0; i < n; i++) {
+        cin >> a[i];
+    }
+    if (n == 2) {
+        cout << 1 << endl;
+        cout << 2 << endl;
+        return 0;
+    }
+    int ans = a[0];
+    int ans_l = 0;
+    int ans_r = 0;
+    int s = 0;
+    int minus_pos = -1;
+    for (int r = 0; r < n; r++) {
+        s += a[r];
+        if (s > ans) {
+            ans = s;
+            ans_l = minus_pos + 1;
+            ans_r = r;
+        }
+        if (s <= 0) {
+            s = 0;
+            minus_pos = r;
+        }
+    }
+    cout << ans_l + 1 << endl;
+    cout << ans_r + 1 << endl;
+    return 0;
