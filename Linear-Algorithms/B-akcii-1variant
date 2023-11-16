@@ -1,0 +1,49 @@
+#include <iostream>
+#include <vector>
+using namespace std;
+//проходит только 3 теста
+
+int main() {
+    int n,x;
+    cin >> n>>x;
+    int a[n], b[n];
+    //заполнили массивы покупки и продажи
+    for (int i = 0; i < n; i++) {
+        cin >> a[i];
+    }
+    for (int i = 0; i < n; i++) {
+        cin >> b[i];
+    }
+
+    int vpokupki = 0;
+    int k,l =0;
+    //ищем в первом массиве день выгодной покупки - купили большинство акций
+    for (int i = 0; i < n; i++) {
+        if (a[i] > 0) 
+        {
+          if (x/a[i] >vpokupki) 
+          {
+            vpokupki = x/a[i];
+            k=i;
+          }
+        }
+    }
+    //Двигаемся от этого дня по второму массиву вправо и ищем день продажи
+  //vprodazhi
+  int sprodazhi = vpokupki*b[k];
+  int max = sprodazhi;
+    for (int i = k; i < n; i++) {
+      sprodazhi = vpokupki*b[i];
+      if (sprodazhi>max) {
+        max = sprodazhi;
+        l=i;
+      }
+    }
+  if (sprodazhi<x) {cout << -1<<" "<<-1;}
+  else
+  {
+    cout << sprodazhi<<endl;
+    cout << k+1<<" "<<l+1;
+  }
+ return 0;
+}
