@@ -1,0 +1,52 @@
+#include <iostream>
+#include <vector>
+using namespace std;
+//gпроходит только 4 теста
+
+int main() {
+    int n,x, k,l, k1, l1;
+    cin >> n>>x;
+    int a[n], b[n];
+    //заполнили массивы покупки и продажи
+    for (int i = 0; i < n; i++) {
+        cin >> a[i];
+    }
+    for (int i = 0; i < n; i++) {
+        cin >> b[i];
+    }
+    int spribyl = x;
+    int max =x;
+    int maxmain =x;
+    k=0;
+    l=0;
+    k1=0;
+    l1=0;
+    for (int i = 0; i < n; i++) {
+      if (a[i] > 0) 
+      {
+        for (int j = i; j < n; j++)
+          { 
+            spribyl = x/a[i]*b[j];
+            if (spribyl>max) 
+            {
+              max = spribyl;
+              l = j;
+            }
+          }
+        if (max>maxmain){
+          maxmain = max;
+          l1 = l;//день продажи
+           k1=i;//день покупки 
+        }
+      } 
+   }
+   if (max <=x){
+     cout << -1<<" "<<-1;
+   }
+     else
+     {
+       cout << max<<endl;
+       cout << k1+1<<" "<<l1+1;
+     }
+ return 0;
+}
