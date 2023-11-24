@@ -1,0 +1,17 @@
+#include <iostream>
+using namespace std;
+
+
+int main()
+{
+char b ;
+cin >>b;
+
+if(b >= 'a' && b <= 'z'){
+        int shift = b - 'a';
+    b = 'A' + shift;
+}
+cout << b;
+
+  return 0;
+}
