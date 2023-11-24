@@ -1,0 +1,35 @@
+#include <iostream>
+#include <vector>
+#include <string.h>
+#include <stdio.h>
+using namespace std;
+
+
+int main()
+{
+  string a;
+  int max = 0;
+  int num = 0;
+  int pos = 0; // position of the space
+  int posprev = 0; // position of the previous space
+  getline(cin, a);
+  for (int i=0; i<a.size(); i++)
+    {
+      if (a[i]==' ')
+        { 
+          num = i+1-posprev;// length of the word
+          posprev = i+1;// position of the previous space
+          if (num>max){
+            max = num;// max length of the word
+            pos = i;  // position of the space after word
+            }
+        }
+    }
+  cout<<max-1<<endl;// print the length of the word without the space
+  for (int j=pos-max+1; j<=pos; j++){
+   cout<<a[j];}// print the word
+
+  return 0;
+}
+
+
