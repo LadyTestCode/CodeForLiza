@@ -25,17 +25,9 @@ int main()
       }
       else
       {
-        if (flag!=0)
-        {
-          chislo=chislo+pow(10,flag)*(a[i]-'0');
-          flag+=1;
-        }
-        else
-        {
-          chislo=(a[i]-'0');
-          flag=1;
-        }
         
+        chislo=chislo+pow(10,flag)*(a[i]-'0');
+        flag+=1;
       }
 
     }
