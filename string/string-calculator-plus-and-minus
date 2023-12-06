@@ -1,0 +1,44 @@
+#include <iostream>
+#include <cmath>
+using namespace std;
+int main()
+{
+  string a;
+  cin>>a;
+  int sum=0;
+  int chislo =0;
+  string b;
+  int flag=0;
+  for (int i=a.size()-1; i>=0; i--)
+    {
+      if (a[i]=='+') 
+      {
+        sum+=chislo;
+        chislo=0;
+        flag=0;
+      }
+      else if (a[i]=='-') 
+      {
+        sum-=chislo;
+        chislo=0;
+        flag=0;
+      }
+      else
+      {
+        if (flag!=0)
+        {
+          chislo=chislo+pow(10,flag)*(a[i]-'0');
+          flag+=1;
+        }
+        else
+        {
+          chislo=(a[i]-'0');
+          flag=1;
+        }
+        
+      }
+
+    }
+  sum+=chislo;
+  cout <<sum;
+}
