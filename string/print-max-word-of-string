@@ -4,7 +4,6 @@
 #include <stdio.h>
 using namespace std;
 
-
 int main()
 {
   string a;
@@ -25,11 +24,10 @@ int main()
             }
         }
     }
-  cout<<max-1<<endl;// print the length of the word without the space
+  
   for (int j=pos-max+1; j<=pos; j++){
    cout<<a[j];}// print the word
+  cout<<endl<<max-1<<endl;// print the length of the word without the space
 
   return 0;
 }
-
-
