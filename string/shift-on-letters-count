@@ -1,0 +1,61 @@
+
+#include <iostream>
+#include <vector>
+#include <string>
+#include <stdio.h>
+using namespace std;
+
+int main()
+{
+    string a, a1;
+    int num = 0;
+    int posprev = 0; // position of the previous space
+    getline(cin, a);
+    a1 = a;
+    int shift=0;
+    for (int j=0;j<=a.size() - 1; j++)
+      {
+        if ((a[j] <65) or (a[j]>90 and a[j]<97) or (a[j]>122))
+        {
+          a[j]=' ';
+        }
+      }
+  
+    for (int i = 0; i <= a.size() - 1; i++)
+    {
+        if ((a[i] == ' ') or (i == a.size() - 1))
+        {
+            num = i - posprev;// length of the word
+            posprev = i + 1;// position of the previous spacе
+            if ((i == a.size() - 1) and (a[i] != ' '))
+            {
+                num = num + 1;
+            }
+            for (int j = i - num; j <= i; j++)
+            {
+                if ((a[j] >= 'A') and (a[j] <= 'Z'))
+                {
+                    shift = int(a[j]) + num;
+                    if (shift > 90)
+                    {
+                      shift = shift - 26;
+                    }
+                    a1[j] = char(shift);
+                }
+                if ((a[j] >= 'a') and (a[j] <= 'z'))
+                {
+                  shift = int(a[j]) + num;
+                  if (shift > 122)
+                  {
+                    shift = shift - 26;
+                  }
+                    a1[j] = char(shift);
+                }
+
+            }
+        }
+    }
+
+    cout << a1;
+    return 0;
+}
