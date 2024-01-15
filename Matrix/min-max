@@ -1,0 +1,49 @@
+// Online C++ compiler to run C++ program online
+#include <iostream>
+
+int main() {
+    int n; //число строк
+    int m; //число столбцов
+    std::cin >> n;
+    std::cin >> m;
+    int ar[100][100];
+    int mnx=0;
+    int mny=0;
+    int mxx=0;
+    int mxy=0;
+    //заполнили массив
+    for (int i = 0; i < n; i++)
+    {
+        for (int j = 0; j < m; j++)
+        {
+          std::cin>>ar[i][j];
+        }
+    }
+
+    int min = ar[0][0];
+    int max = ar[0][0];
+    
+    for (int i = 0; i < n; i++)
+    {
+        
+        for (int j = 0; j < m; j++)
+        {
+             if (ar[i][j]<min) 
+             {min = ar[i][j];
+              mnx=i;
+              mny=j;
+             }
+            if (ar[i][j]>max) 
+             {
+                max = ar[i][j];
+                mxx=i;
+                mxy=j;
+              }
+            
+        }
+    }
+
+    std::cout << mnx+1 << " " << mny+1 << " " << min<<std::endl;
+    std::cout << mxx+1 << " " << mxy+1 << " " << max;
+    return 0;
+}
