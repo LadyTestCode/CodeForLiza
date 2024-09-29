@@ -1,0 +1,29 @@
+// Online C++ compiler to run C++ program online
+#include <iostream>
+#include <iostream>
+#include <math.h>
+
+
+void simple (int a)
+{
+  for (int i=2; i <= sqrt(a); i++)
+    {
+      if (a%i==0)
+      {
+        return;
+      }
+    }
+    std::cout<<a<<" ";
+    
+}
+int main() {
+    // Write C++ code here
+    int n;
+    std::cin>>n;
+    for (int j=2; j <= n; j++)
+    {
+        simple(j);
+    }
+
+    return 0;
+}
